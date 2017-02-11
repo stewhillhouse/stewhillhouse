@@ -22,6 +22,11 @@ a {
 .nav-wrapper {
   background-color: #c13f20;
   height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .nav_item {
@@ -60,21 +65,54 @@ a {
   justify-content: center;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown-menu {
   display: block;
+  width: 200px;
   background-color: #c13f20;
   position: absolute;
+  left: -65px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   border-radius: 2px;
   overflow: hidden;
   transform: scale(0);
+  transform-origin: top;
   transition: transform ease-in-out 450ms;
 }
 
 
-
 .dropdown-menu.open {
   transform: scale(1);
+}
 
+#header {
+  text-align: center;
+  background-color: #c13f20;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+  margin-top: 60px;
+  padding-top: calc(50vh - 100px);
+
+}
+
+.title, .subtitle {
+  color: white;
+
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.subtitle{
+  text-transform: uppercase;
+}
+
+.section{
+  padding-top: 80px;
 }
